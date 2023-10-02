@@ -1,0 +1,21 @@
+class Main {
+	function void main() {
+		var TetrisGame game;
+		var int key;
+        do TetrisGame.newInstance();
+        let game = TetrisGame.getInstance();
+        do game.run();
+        do game.dispose();
+
+        while(~(key=140)){
+        	let key = Keyboard.keyPressed();
+        	if(key=32){
+        		do TetrisGame.newInstance();
+		        let game = TetrisGame.getInstance();
+		        do game.run();
+		        do game.dispose();
+        	}
+        }
+        return;
+	}
+}

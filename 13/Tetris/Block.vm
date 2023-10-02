@@ -1,0 +1,4863 @@
+function Block.new 0
+push constant 24
+call Memory.alloc 1
+pop pointer 0
+push constant 0
+pop this 9
+push constant 248
+pop this 2
+push constant 32
+pop this 3
+push this 2
+pop this 0
+push this 3
+pop this 1
+push constant 32767
+pop this 10
+push constant 0
+pop this 6
+push constant 0
+pop this 15
+push constant 7
+pop this 16
+push constant 3
+pop this 17
+push constant 2
+pop this 18
+push constant 4
+call Array.new 1
+pop this 4
+push constant 4
+call Array.new 1
+pop this 5
+push constant 464
+pop this 20
+push constant 16
+pop this 21
+push constant 4
+call Array.new 1
+pop this 22
+push constant 4
+call Array.new 1
+pop this 23
+push constant 1
+pop this 7
+push pointer 0
+call Block.newSequence 1
+pop temp 0
+push pointer 0
+call Block.newBlock 1
+pop temp 0
+push pointer 0
+call Block.draw 1
+pop temp 0
+call Board.new 0
+pop this 14
+push this 14
+call Board.getStartX 1
+pop this 11
+push this 14
+call Board.getStartY 1
+pop this 12
+push pointer 0
+return
+function Block.draw 3
+push argument 0
+pop pointer 0
+push this 6
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 1000
+pop local 2
+label IF_FALSE0
+push this 6
+push constant 2
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 1
+pop local 2
+label IF_FALSE1
+push this 6
+push constant 1
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 10
+pop local 2
+label IF_FALSE2
+push this 6
+push constant 3
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push constant 100
+pop local 2
+label IF_FALSE3
+push constant 0
+pop local 0
+push constant 0
+pop local 1
+label WHILE_EXP0
+push local 0
+push constant 2
+lt
+not
+if-goto WHILE_END0
+push constant 0
+pop local 1
+label WHILE_EXP1
+push local 1
+push constant 4
+lt
+not
+if-goto WHILE_END1
+push local 0
+push constant 0
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push local 1
+push this 5
+add
+pop pointer 1
+push that 0
+push constant 1
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push this 6
+push constant 0
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push this 0
+push constant 8
+push local 1
+push constant 1
+sub
+call Math.multiply 2
+add
+push constant 1
+add
+push this 1
+push constant 1
+add
+push this 0
+push constant 8
+push local 1
+push constant 1
+sub
+call Math.multiply 2
+add
+push constant 6
+add
+push this 1
+push constant 6
+add
+call Screen.drawRectangle 4
+pop temp 0
+label IF_FALSE6
+push this 6
+push constant 1
+eq
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push this 0
+push constant 9
+add
+push this 1
+push constant 8
+push local 1
+push constant 1
+sub
+call Math.multiply 2
+add
+push constant 1
+add
+push this 0
+push constant 14
+add
+push this 1
+push constant 8
+push local 1
+push constant 1
+sub
+call Math.multiply 2
+add
+push constant 6
+add
+call Screen.drawRectangle 4
+pop temp 0
+label IF_FALSE7
+push this 6
+push constant 2
+eq
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push this 0
+push constant 8
+push local 1
+push constant 2
+sub
+call Math.multiply 2
+sub
+push constant 1
+add
+push this 1
+push constant 9
+add
+push this 0
+push constant 8
+push local 1
+push constant 2
+sub
+call Math.multiply 2
+sub
+push constant 6
+add
+push this 1
+push constant 14
+add
+call Screen.drawRectangle 4
+pop temp 0
+label IF_FALSE8
+push this 6
+push constant 3
+eq
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push this 0
+push constant 1
+add
+push this 1
+push constant 8
+push local 1
+push constant 2
+sub
+call Math.multiply 2
+sub
+push constant 1
+add
+push this 0
+push constant 6
+add
+push this 1
+push constant 8
+push local 1
+push constant 2
+sub
+call Math.multiply 2
+sub
+push constant 6
+add
+call Screen.drawRectangle 4
+pop temp 0
+label IF_FALSE9
+label IF_FALSE5
+goto IF_END4
+label IF_FALSE4
+push local 1
+push this 4
+add
+pop pointer 1
+push that 0
+push constant 1
+eq
+if-goto IF_TRUE10
+goto IF_FALSE10
+label IF_TRUE10
+push this 6
+push constant 0
+eq
+if-goto IF_TRUE11
+goto IF_FALSE11
+label IF_TRUE11
+push this 0
+push constant 8
+push local 1
+push constant 1
+sub
+call Math.multiply 2
+add
+push constant 1
+add
+push this 1
+push constant 9
+add
+push this 0
+push constant 8
+push local 1
+push constant 1
+sub
+call Math.multiply 2
+add
+push constant 6
+add
+push this 1
+push constant 14
+add
+call Screen.drawRectangle 4
+pop temp 0
+label IF_FALSE11
+push this 6
+push constant 1
+eq
+if-goto IF_TRUE12
+goto IF_FALSE12
+label IF_TRUE12
+push this 0
+push constant 1
+add
+push this 1
+push constant 8
+push local 1
+push constant 1
+sub
+call Math.multiply 2
+add
+push constant 1
+add
+push this 0
+push constant 6
+add
+push this 1
+push constant 8
+push local 1
+push constant 1
+sub
+call Math.multiply 2
+add
+push constant 6
+add
+call Screen.drawRectangle 4
+pop temp 0
+label IF_FALSE12
+push this 6
+push constant 2
+eq
+if-goto IF_TRUE13
+goto IF_FALSE13
+label IF_TRUE13
+push this 0
+push constant 8
+push local 1
+push constant 2
+sub
+call Math.multiply 2
+sub
+push constant 1
+add
+push this 1
+push constant 1
+add
+push this 0
+push constant 8
+push local 1
+push constant 2
+sub
+call Math.multiply 2
+sub
+push constant 6
+add
+push this 1
+push constant 6
+add
+call Screen.drawRectangle 4
+pop temp 0
+label IF_FALSE13
+push this 6
+push constant 3
+eq
+if-goto IF_TRUE14
+goto IF_FALSE14
+label IF_TRUE14
+push this 0
+push constant 9
+add
+push this 1
+push constant 8
+push local 1
+push constant 2
+sub
+call Math.multiply 2
+sub
+push constant 1
+add
+push this 0
+push constant 14
+add
+push this 1
+push constant 8
+push local 1
+push constant 2
+sub
+call Math.multiply 2
+sub
+push constant 6
+add
+call Screen.drawRectangle 4
+pop temp 0
+label IF_FALSE14
+label IF_FALSE10
+label IF_END4
+push this 6
+push constant 0
+eq
+if-goto IF_TRUE15
+goto IF_FALSE15
+label IF_TRUE15
+push local 2
+push constant 10
+call Math.divide 2
+pop local 2
+label IF_FALSE15
+push this 6
+push constant 2
+eq
+if-goto IF_TRUE16
+goto IF_FALSE16
+label IF_TRUE16
+push local 2
+push constant 10
+call Math.multiply 2
+pop local 2
+label IF_FALSE16
+push local 1
+push constant 1
+add
+pop local 1
+goto WHILE_EXP1
+label WHILE_END1
+push this 6
+push constant 1
+eq
+if-goto IF_TRUE17
+goto IF_FALSE17
+label IF_TRUE17
+push constant 100
+pop local 2
+label IF_FALSE17
+push this 6
+push constant 3
+eq
+if-goto IF_TRUE18
+goto IF_FALSE18
+label IF_TRUE18
+push constant 10
+pop local 2
+label IF_FALSE18
+push this 6
+push constant 0
+eq
+if-goto IF_TRUE19
+goto IF_FALSE19
+label IF_TRUE19
+push constant 1000
+pop local 2
+label IF_FALSE19
+push this 6
+push constant 2
+eq
+if-goto IF_TRUE20
+goto IF_FALSE20
+label IF_TRUE20
+push constant 1
+pop local 2
+label IF_FALSE20
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push this 7
+push this 10
+eq
+if-goto IF_TRUE21
+goto IF_FALSE21
+label IF_TRUE21
+push constant 0
+pop this 7
+label IF_FALSE21
+push this 7
+push constant 1
+add
+pop this 7
+push constant 0
+return
+function Block.undraw 0
+push argument 0
+pop pointer 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push pointer 0
+call Block.draw 1
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push constant 0
+return
+function Block.move 0
+push argument 0
+pop pointer 0
+push argument 2
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push argument 1
+push constant 130
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 13
+push constant 2
+eq
+not
+push this 6
+push constant 0
+eq
+and
+push this 0
+push constant 8
+sub
+push this 11
+gt
+and
+push this 6
+push constant 1
+eq
+push this 0
+push this 11
+gt
+and
+or
+push this 13
+push constant 0
+eq
+not
+push this 13
+push constant 5
+eq
+not
+and
+push this 6
+push constant 2
+eq
+and
+push this 0
+push this 11
+gt
+and
+or
+push this 13
+push constant 0
+eq
+not
+push this 6
+push constant 3
+eq
+and
+push this 0
+push this 11
+gt
+and
+or
+push this 13
+push constant 2
+eq
+push this 13
+push constant 5
+eq
+push this 6
+push constant 2
+eq
+not
+and
+or
+push this 0
+push this 11
+gt
+and
+or
+push this 13
+push constant 5
+eq
+push this 6
+push constant 2
+eq
+and
+push this 0
+push constant 8
+sub
+push this 11
+gt
+and
+or
+push this 6
+push constant 2
+eq
+push this 13
+push constant 0
+eq
+and
+push this 0
+push constant 8
+sub
+push this 11
+gt
+and
+or
+push this 6
+push constant 3
+eq
+push this 13
+push constant 0
+eq
+and
+push this 0
+push constant 8
+add
+push this 11
+gt
+and
+or
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push pointer 0
+call Block.checkLeft 1
+not
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push pointer 0
+call Block.undraw 1
+pop temp 0
+push this 0
+push constant 8
+sub
+pop this 0
+push pointer 0
+call Block.draw 1
+pop temp 0
+label IF_FALSE3
+label IF_FALSE2
+label IF_FALSE1
+push argument 1
+push constant 132
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push this 13
+push constant 0
+eq
+push this 13
+push constant 5
+eq
+or
+not
+push this 6
+push constant 0
+eq
+and
+push this 0
+push constant 16
+add
+push this 11
+push constant 80
+add
+lt
+and
+push this 13
+push constant 0
+eq
+not
+push this 6
+push constant 1
+eq
+and
+push this 0
+push constant 16
+add
+push this 11
+push constant 80
+add
+lt
+and
+or
+push this 13
+push constant 2
+eq
+not
+push this 6
+push constant 2
+eq
+and
+push this 0
+push constant 24
+add
+push this 11
+push constant 80
+add
+lt
+and
+or
+push this 6
+push constant 3
+eq
+push this 0
+push constant 16
+add
+push this 11
+push constant 80
+add
+lt
+and
+or
+push this 13
+push constant 0
+eq
+push this 13
+push constant 5
+eq
+or
+push this 6
+push constant 0
+eq
+and
+push this 0
+push constant 24
+add
+push this 11
+push constant 80
+add
+lt
+and
+or
+push this 13
+push constant 0
+eq
+push this 6
+push constant 1
+eq
+and
+push this 0
+push constant 8
+add
+push this 11
+push constant 80
+add
+lt
+and
+or
+push this 13
+push constant 2
+eq
+push this 13
+push constant 5
+eq
+push this 6
+push constant 2
+eq
+and
+or
+push this 0
+push constant 16
+add
+push this 11
+push constant 80
+add
+lt
+and
+or
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push pointer 0
+call Block.checkRight 1
+not
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push pointer 0
+call Block.undraw 1
+pop temp 0
+push this 0
+push constant 8
+add
+pop this 0
+push pointer 0
+call Block.draw 1
+pop temp 0
+label IF_FALSE6
+label IF_FALSE5
+label IF_FALSE4
+push argument 1
+push constant 133
+eq
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push pointer 0
+call Block.checkBot 1
+pop temp 0
+push pointer 0
+call Block.undraw 1
+pop temp 0
+push this 1
+push constant 8
+add
+pop this 1
+push pointer 0
+call Block.draw 1
+pop temp 0
+label IF_FALSE7
+goto IF_END0
+label IF_FALSE0
+push argument 1
+push constant 130
+eq
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push this 0
+push constant 8
+sub
+pop this 0
+label IF_FALSE8
+push argument 1
+push constant 132
+eq
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push this 0
+push constant 8
+add
+pop this 0
+label IF_FALSE9
+push argument 1
+push constant 133
+eq
+if-goto IF_TRUE10
+goto IF_FALSE10
+label IF_TRUE10
+push pointer 0
+call Block.checkBot 1
+pop temp 0
+push this 1
+push constant 8
+add
+pop this 1
+label IF_FALSE10
+label IF_END0
+push constant 0
+return
+function Block.dispose 0
+push argument 0
+pop pointer 0
+push this 14
+call Board.dispose 1
+pop temp 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return
+function Block.rotate 1
+push argument 0
+pop pointer 0
+push constant 0
+pop local 0
+push this 6
+push constant 1
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 13
+push constant 0
+eq
+push this 13
+push constant 5
+eq
+or
+push this 0
+push constant 8
+sub
+push this 11
+lt
+and
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push pointer 0
+call Block.undraw 1
+pop temp 0
+push pointer 0
+push constant 132
+push constant 0
+call Block.move 3
+pop temp 0
+push constant 1
+pop local 0
+label IF_FALSE1
+push this 13
+push constant 0
+eq
+not
+push this 13
+push constant 2
+eq
+not
+and
+push this 13
+push constant 5
+eq
+not
+and
+push this 0
+push constant 24
+add
+push this 11
+push constant 80
+add
+gt
+and
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push pointer 0
+call Block.undraw 1
+pop temp 0
+push pointer 0
+push constant 130
+push constant 0
+call Block.move 3
+pop temp 0
+push constant 2
+pop local 0
+label IF_FALSE2
+push this 13
+push constant 0
+eq
+push this 0
+push constant 16
+add
+push this 11
+push constant 80
+add
+gt
+and
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push pointer 0
+call Block.undraw 1
+pop temp 0
+push pointer 0
+push constant 130
+push constant 0
+call Block.move 3
+pop temp 0
+push pointer 0
+push constant 130
+push constant 0
+call Block.move 3
+pop temp 0
+push constant 3
+pop local 0
+label IF_FALSE3
+label IF_FALSE0
+push this 6
+push constant 3
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push this 13
+push constant 0
+eq
+push this 13
+push constant 5
+eq
+or
+push this 0
+push constant 24
+add
+push this 11
+push constant 80
+add
+gt
+and
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push pointer 0
+call Block.undraw 1
+pop temp 0
+push pointer 0
+push constant 130
+push constant 0
+call Block.move 3
+pop temp 0
+push constant 4
+pop local 0
+label IF_FALSE5
+push this 13
+push constant 0
+eq
+not
+push this 13
+push constant 2
+eq
+not
+and
+push this 13
+push constant 5
+eq
+not
+and
+push this 0
+push constant 8
+sub
+push this 11
+lt
+and
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push pointer 0
+call Block.undraw 1
+pop temp 0
+push pointer 0
+push constant 132
+push constant 0
+call Block.move 3
+pop temp 0
+push constant 5
+pop local 0
+label IF_FALSE6
+push this 13
+push constant 0
+eq
+push this 0
+push constant 8
+sub
+push this 11
+lt
+and
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push pointer 0
+call Block.undraw 1
+pop temp 0
+push pointer 0
+push constant 132
+push constant 0
+call Block.move 3
+pop temp 0
+push pointer 0
+push constant 132
+push constant 0
+call Block.move 3
+pop temp 0
+push constant 6
+pop local 0
+label IF_FALSE7
+label IF_FALSE4
+push pointer 0
+call Block.checkRotate 1
+not
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push pointer 0
+call Block.undraw 1
+pop temp 0
+push this 6
+push constant 3
+eq
+not
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push this 6
+push constant 1
+add
+pop this 6
+goto IF_END9
+label IF_FALSE9
+push constant 0
+pop this 6
+label IF_END9
+push pointer 0
+call Block.draw 1
+pop temp 0
+goto IF_END8
+label IF_FALSE8
+push local 0
+push constant 0
+gt
+if-goto IF_TRUE10
+goto IF_FALSE10
+label IF_TRUE10
+push local 0
+push constant 1
+eq
+push local 0
+push constant 5
+eq
+or
+if-goto IF_TRUE11
+goto IF_FALSE11
+label IF_TRUE11
+push pointer 0
+push constant 130
+push constant 0
+call Block.move 3
+pop temp 0
+push pointer 0
+call Block.draw 1
+pop temp 0
+label IF_FALSE11
+push local 0
+push constant 2
+eq
+push local 0
+push constant 4
+eq
+or
+if-goto IF_TRUE12
+goto IF_FALSE12
+label IF_TRUE12
+push pointer 0
+push constant 132
+push constant 0
+call Block.move 3
+pop temp 0
+push pointer 0
+call Block.draw 1
+pop temp 0
+label IF_FALSE12
+push local 0
+push constant 3
+eq
+if-goto IF_TRUE13
+goto IF_FALSE13
+label IF_TRUE13
+push pointer 0
+push constant 132
+push constant 0
+call Block.move 3
+pop temp 0
+push pointer 0
+push constant 132
+push constant 0
+call Block.move 3
+pop temp 0
+push pointer 0
+call Block.draw 1
+pop temp 0
+label IF_FALSE13
+push local 0
+push constant 6
+eq
+if-goto IF_TRUE14
+goto IF_FALSE14
+label IF_TRUE14
+push pointer 0
+push constant 130
+push constant 0
+call Block.move 3
+pop temp 0
+push pointer 0
+push constant 130
+push constant 0
+call Block.move 3
+pop temp 0
+push pointer 0
+call Block.draw 1
+pop temp 0
+label IF_FALSE14
+label IF_FALSE10
+label IF_END8
+push constant 0
+return
+function Block.getY 0
+push argument 0
+pop pointer 0
+push this 1
+return
+function Block.getX 0
+push argument 0
+pop pointer 0
+push this 0
+return
+function Block.newSequence 3
+push argument 0
+pop pointer 0
+push this 18
+push constant 1
+add
+pop this 18
+push this 18
+push constant 7
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 1
+pop this 18
+label IF_FALSE0
+push constant 0
+pop local 1
+push constant 7
+call Array.new 1
+pop this 19
+push this 7
+push this 7
+push this 16
+call Math.divide 2
+push this 16
+call Math.multiply 2
+sub
+pop local 0
+push constant 0
+push this 19
+add
+push this 15
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push local 0
+pop local 2
+push local 2
+push this 17
+call Math.multiply 2
+pop local 2
+push local 2
+push this 18
+add
+pop local 2
+push local 2
+push local 2
+push this 16
+call Math.divide 2
+push this 16
+call Math.multiply 2
+sub
+pop local 2
+push local 2
+push local 0
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push local 0
+push constant 1
+sub
+pop local 0
+label IF_FALSE1
+label WHILE_EXP0
+push local 1
+push constant 6
+lt
+not
+if-goto WHILE_END0
+push local 1
+push this 19
+add
+push local 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push local 0
+push this 17
+call Math.multiply 2
+pop local 0
+push local 0
+push this 18
+add
+pop local 0
+push local 0
+push local 0
+push this 16
+call Math.divide 2
+push this 16
+call Math.multiply 2
+sub
+pop local 0
+push local 1
+push constant 1
+add
+pop local 1
+goto WHILE_EXP0
+label WHILE_END0
+push constant 6
+push this 19
+add
+push this 18
+push this 17
+call Math.multiply 2
+push this 18
+push this 17
+call Math.multiply 2
+push this 16
+call Math.divide 2
+push this 16
+call Math.multiply 2
+sub
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 0
+return
+function Block.newBlock 0
+push argument 0
+pop pointer 0
+push this 2
+pop this 0
+push this 3
+pop this 1
+push constant 0
+pop this 6
+push this 15
+push this 19
+add
+pop pointer 1
+push that 0
+pop this 13
+push this 15
+push this 19
+add
+pop pointer 1
+push that 0
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+push this 5
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 5
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 5
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 5
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 0
+push this 4
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 4
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 4
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 4
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+label IF_FALSE0
+push this 15
+push this 19
+add
+pop pointer 1
+push that 0
+push constant 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+push this 5
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 5
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 5
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 5
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 0
+push this 4
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 4
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 4
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 4
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+label IF_FALSE1
+push this 15
+push this 19
+add
+pop pointer 1
+push that 0
+push constant 2
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 0
+push this 5
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 5
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 5
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 5
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 0
+push this 4
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 4
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 4
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 4
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+label IF_FALSE2
+push this 15
+push this 19
+add
+pop pointer 1
+push that 0
+push constant 3
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push constant 0
+push this 5
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 5
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 5
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 5
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 0
+push this 4
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 4
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 4
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 4
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+label IF_FALSE3
+push this 15
+push this 19
+add
+pop pointer 1
+push that 0
+push constant 4
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push constant 0
+push this 5
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 5
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 5
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 5
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 0
+push this 4
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 4
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 4
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 4
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+label IF_FALSE4
+push this 15
+push this 19
+add
+pop pointer 1
+push that 0
+push constant 5
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push constant 0
+push this 5
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 5
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 5
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 5
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 0
+push this 4
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 4
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 4
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 4
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+label IF_FALSE5
+push this 15
+push this 19
+add
+pop pointer 1
+push that 0
+push constant 6
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push constant 0
+push this 5
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 5
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 5
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 5
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 0
+push this 4
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 4
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 4
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 4
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+label IF_FALSE6
+push this 15
+push constant 1
+add
+pop this 15
+push this 15
+push constant 7
+eq
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push constant 0
+pop this 15
+push pointer 0
+call Block.newSequence 1
+pop temp 0
+label IF_FALSE7
+push pointer 0
+call Block.drawNext 1
+pop temp 0
+push pointer 0
+call Block.draw 1
+pop temp 0
+push constant 0
+return
+function Block.drawNext 2
+push argument 0
+pop pointer 0
+push this 15
+push this 19
+add
+pop pointer 1
+push that 0
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+push this 22
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 22
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 22
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 22
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 0
+push this 23
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 23
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 23
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 23
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+label IF_FALSE0
+push this 15
+push this 19
+add
+pop pointer 1
+push that 0
+push constant 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+push this 22
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 22
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 22
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 22
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 0
+push this 23
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 23
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 23
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 23
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+label IF_FALSE1
+push this 15
+push this 19
+add
+pop pointer 1
+push that 0
+push constant 2
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 0
+push this 22
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 22
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 22
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 22
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 0
+push this 23
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 23
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 23
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 23
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+label IF_FALSE2
+push this 15
+push this 19
+add
+pop pointer 1
+push that 0
+push constant 3
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push constant 0
+push this 22
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 22
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 22
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 22
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 0
+push this 23
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 23
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 23
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 23
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+label IF_FALSE3
+push this 15
+push this 19
+add
+pop pointer 1
+push that 0
+push constant 4
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push constant 0
+push this 22
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 22
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 22
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 22
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 0
+push this 23
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 23
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 23
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 23
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+label IF_FALSE4
+push this 15
+push this 19
+add
+pop pointer 1
+push that 0
+push constant 5
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push constant 0
+push this 22
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 22
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 22
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 22
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 0
+push this 23
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 23
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 23
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 23
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+label IF_FALSE5
+push this 15
+push this 19
+add
+pop pointer 1
+push that 0
+push constant 6
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push constant 0
+push this 22
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 22
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 22
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 22
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 0
+push this 23
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 23
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 23
+add
+push constant 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 23
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+label IF_FALSE6
+push constant 0
+pop local 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push this 20
+push this 21
+push this 20
+push constant 32
+add
+push this 21
+push constant 16
+add
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+label WHILE_EXP0
+push local 0
+push constant 2
+lt
+not
+if-goto WHILE_END0
+push constant 0
+pop local 1
+label WHILE_EXP1
+push local 1
+push constant 4
+lt
+not
+if-goto WHILE_END1
+push local 0
+push constant 0
+eq
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push local 1
+push this 22
+add
+pop pointer 1
+push that 0
+push constant 1
+eq
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push this 20
+push constant 1
+add
+push constant 8
+push local 1
+call Math.multiply 2
+add
+push this 21
+push constant 1
+add
+push this 20
+push constant 6
+add
+push constant 8
+push local 1
+call Math.multiply 2
+add
+push this 21
+push constant 6
+add
+call Screen.drawRectangle 4
+pop temp 0
+label IF_FALSE8
+label IF_FALSE7
+push local 0
+push constant 1
+eq
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push local 1
+push this 23
+add
+pop pointer 1
+push that 0
+push constant 1
+eq
+if-goto IF_TRUE10
+goto IF_FALSE10
+label IF_TRUE10
+push this 20
+push constant 1
+add
+push constant 8
+push local 1
+call Math.multiply 2
+add
+push this 21
+push constant 9
+add
+push this 20
+push constant 6
+add
+push constant 8
+push local 1
+call Math.multiply 2
+add
+push this 21
+push constant 14
+add
+call Screen.drawRectangle 4
+pop temp 0
+label IF_FALSE10
+label IF_FALSE9
+push local 1
+push constant 1
+add
+pop local 1
+goto WHILE_EXP1
+label WHILE_END1
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return
+function Block.getRotation 0
+push argument 0
+pop pointer 0
+push this 6
+return
+function Block.setBoardPos 0
+push argument 0
+pop pointer 0
+push argument 1
+pop this 11
+push argument 2
+pop this 12
+push constant 0
+return
+function Block.setBoard 0
+push argument 0
+pop pointer 0
+push argument 1
+pop this 14
+push constant 0
+return
+function Block.convertX 0
+push argument 0
+pop pointer 0
+push argument 1
+push this 11
+sub
+push constant 8
+call Math.divide 2
+return
+function Block.convertY 0
+push argument 0
+pop pointer 0
+push argument 1
+push this 12
+sub
+push constant 8
+call Math.divide 2
+return
+function Block.checkBot 5
+push argument 0
+pop pointer 0
+push pointer 0
+push this 0
+call Block.convertX 2
+push constant 1
+sub
+pop local 0
+push pointer 0
+push this 1
+call Block.convertY 2
+push constant 1
+sub
+pop local 1
+push local 1
+push constant 20
+eq
+push this 6
+push constant 0
+eq
+and
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+not
+return
+label IF_FALSE0
+push this 6
+push constant 2
+eq
+push local 1
+push constant 20
+eq
+push this 13
+push constant 0
+eq
+not
+and
+push local 1
+push constant 21
+eq
+push this 13
+push constant 0
+eq
+and
+or
+and
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+not
+return
+label IF_FALSE1
+push this 6
+push constant 1
+eq
+push local 1
+push constant 20
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 5
+eq
+or
+not
+and
+push local 1
+push constant 19
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 5
+eq
+or
+and
+or
+and
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 0
+not
+return
+label IF_FALSE2
+push this 6
+push constant 3
+eq
+push local 1
+push constant 19
+eq
+push this 13
+push constant 2
+eq
+push this 13
+push constant 5
+eq
+or
+not
+and
+push local 1
+push constant 20
+eq
+push this 13
+push constant 2
+eq
+push this 13
+push constant 5
+eq
+or
+and
+or
+and
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push constant 0
+not
+return
+label IF_FALSE3
+push this 14
+push local 0
+push local 1
+push constant 2
+add
+call Board.getPixel 3
+push this 6
+push constant 2
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 5
+eq
+or
+and
+push this 6
+push constant 0
+eq
+push this 13
+push constant 6
+eq
+and
+or
+and
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push constant 0
+not
+return
+label IF_FALSE4
+push this 14
+push local 0
+push constant 1
+add
+push local 1
+push constant 2
+add
+call Board.getPixel 3
+push this 6
+push constant 2
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 4
+eq
+or
+push this 13
+push constant 5
+eq
+or
+push this 13
+push constant 6
+eq
+or
+and
+push this 6
+push constant 1
+eq
+push this 13
+push constant 3
+eq
+and
+or
+push this 6
+push constant 3
+eq
+push this 13
+push constant 1
+eq
+and
+or
+and
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push constant 0
+not
+return
+label IF_FALSE5
+push this 14
+push local 0
+push constant 2
+add
+push local 1
+push constant 2
+add
+call Board.getPixel 3
+push this 6
+push constant 2
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 1
+eq
+or
+push this 13
+push constant 4
+eq
+or
+and
+push this 6
+push constant 0
+eq
+push this 13
+push constant 3
+eq
+and
+or
+push this 6
+push constant 1
+eq
+push this 13
+push constant 6
+eq
+push this 13
+push constant 4
+eq
+or
+push this 13
+push constant 5
+eq
+or
+and
+or
+and
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push constant 0
+not
+return
+label IF_FALSE6
+push this 14
+push local 0
+push constant 3
+add
+push local 1
+push constant 2
+add
+call Board.getPixel 3
+push this 6
+push constant 2
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 1
+eq
+or
+push this 13
+push constant 3
+eq
+or
+push this 13
+push constant 4
+eq
+or
+and
+and
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push constant 0
+not
+return
+label IF_FALSE7
+push this 14
+push local 0
+push local 1
+push constant 3
+add
+call Board.getPixel 3
+push this 6
+push constant 0
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 1
+eq
+or
+push this 13
+push constant 3
+eq
+or
+push this 13
+push constant 4
+eq
+or
+and
+and
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push constant 0
+not
+return
+label IF_FALSE8
+push this 14
+push local 0
+push constant 1
+add
+push local 1
+push constant 3
+add
+call Board.getPixel 3
+push this 6
+push constant 0
+eq
+push this 13
+push constant 2
+eq
+or
+push this 6
+push constant 1
+eq
+push this 13
+push constant 1
+eq
+push this 13
+push constant 4
+eq
+or
+push this 13
+push constant 6
+eq
+or
+and
+or
+push this 6
+push constant 2
+eq
+push this 13
+push constant 1
+eq
+push this 13
+push constant 3
+eq
+or
+and
+or
+push this 6
+push constant 3
+eq
+push this 13
+push constant 3
+eq
+push this 13
+push constant 4
+eq
+or
+push this 13
+push constant 5
+eq
+or
+and
+or
+and
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push constant 0
+not
+return
+label IF_FALSE9
+push this 14
+push local 0
+push constant 2
+add
+push local 1
+push constant 3
+add
+call Board.getPixel 3
+push this 13
+push constant 2
+eq
+push this 6
+push constant 0
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 1
+eq
+or
+push this 13
+push constant 4
+eq
+or
+push this 13
+push constant 5
+eq
+or
+push this 13
+push constant 6
+eq
+or
+and
+or
+push this 6
+push constant 1
+eq
+push this 13
+push constant 1
+eq
+push this 13
+push constant 3
+eq
+or
+and
+or
+push this 6
+push constant 2
+eq
+push this 13
+push constant 3
+eq
+push this 13
+push constant 4
+eq
+or
+push this 13
+push constant 6
+eq
+or
+and
+or
+push this 6
+push constant 3
+eq
+push this 13
+push constant 6
+eq
+push this 13
+push constant 5
+eq
+or
+and
+or
+and
+if-goto IF_TRUE10
+goto IF_FALSE10
+label IF_TRUE10
+push constant 0
+not
+return
+label IF_FALSE10
+push this 14
+push local 0
+push constant 3
+add
+push local 1
+push constant 3
+add
+call Board.getPixel 3
+push this 6
+push constant 0
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 5
+eq
+or
+and
+push this 6
+push constant 2
+eq
+push this 13
+push constant 6
+eq
+and
+or
+and
+if-goto IF_TRUE11
+goto IF_FALSE11
+label IF_TRUE11
+push constant 0
+not
+return
+label IF_FALSE11
+push this 14
+push local 0
+push constant 1
+add
+push local 1
+push constant 4
+add
+call Board.getPixel 3
+push this 6
+push constant 1
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 5
+eq
+or
+and
+push this 6
+push constant 3
+eq
+push this 13
+push constant 6
+eq
+and
+or
+and
+if-goto IF_TRUE12
+goto IF_FALSE12
+label IF_TRUE12
+push constant 0
+not
+return
+label IF_FALSE12
+push this 14
+push local 0
+push constant 2
+add
+push local 1
+push constant 4
+add
+call Board.getPixel 3
+push this 6
+push constant 3
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 1
+eq
+or
+push this 13
+push constant 3
+eq
+or
+push this 13
+push constant 4
+eq
+or
+and
+and
+if-goto IF_TRUE13
+goto IF_FALSE13
+label IF_TRUE13
+push constant 0
+not
+return
+label IF_FALSE13
+push constant 0
+return
+function Block.drawPixels 5
+push argument 0
+pop pointer 0
+push pointer 0
+push this 0
+call Block.convertX 2
+pop local 0
+push pointer 0
+push this 1
+call Block.convertY 2
+push constant 1
+sub
+pop local 1
+push constant 0
+pop local 2
+push constant 0
+pop local 3
+label WHILE_EXP0
+push local 2
+push constant 2
+lt
+not
+if-goto WHILE_END0
+push constant 0
+pop local 3
+label WHILE_EXP1
+push local 3
+push constant 4
+lt
+not
+if-goto WHILE_END1
+push local 2
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push local 3
+push this 5
+add
+pop pointer 1
+push that 0
+push constant 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 6
+push constant 0
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 14
+push local 0
+push local 3
+add
+push constant 1
+sub
+push local 1
+push constant 1
+add
+call Board.drawPixel 3
+pop temp 0
+label IF_FALSE2
+push this 6
+push constant 1
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 14
+push local 0
+push constant 1
+add
+push local 1
+push local 3
+add
+call Board.drawPixel 3
+pop temp 0
+label IF_FALSE3
+push this 6
+push constant 2
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push this 14
+push local 0
+push local 3
+push constant 2
+sub
+sub
+push local 1
+push constant 2
+add
+call Board.drawPixel 3
+pop temp 0
+label IF_FALSE4
+push this 6
+push constant 3
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push this 14
+push local 0
+push local 1
+push local 3
+push constant 3
+sub
+sub
+call Board.drawPixel 3
+pop temp 0
+label IF_FALSE5
+label IF_FALSE1
+goto IF_END0
+label IF_FALSE0
+push local 3
+push this 4
+add
+pop pointer 1
+push that 0
+push constant 1
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push this 6
+push constant 0
+eq
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push this 14
+push local 0
+push local 3
+add
+push constant 1
+sub
+push local 1
+push constant 2
+add
+call Board.drawPixel 3
+pop temp 0
+label IF_FALSE7
+push this 6
+push constant 1
+eq
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push this 14
+push local 0
+push local 1
+push local 3
+add
+call Board.drawPixel 3
+pop temp 0
+label IF_FALSE8
+push this 6
+push constant 2
+eq
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push this 14
+push local 0
+push local 3
+push constant 2
+sub
+sub
+push local 1
+push constant 1
+add
+call Board.drawPixel 3
+pop temp 0
+label IF_FALSE9
+push this 6
+push constant 3
+eq
+if-goto IF_TRUE10
+goto IF_FALSE10
+label IF_TRUE10
+push this 14
+push local 0
+push constant 1
+add
+push local 1
+push local 3
+push constant 3
+sub
+sub
+call Board.drawPixel 3
+pop temp 0
+label IF_FALSE10
+label IF_FALSE6
+label IF_END0
+push local 3
+push constant 1
+add
+pop local 3
+goto WHILE_EXP1
+label WHILE_END1
+push local 2
+push constant 1
+add
+pop local 2
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+pop local 2
+push constant 0
+pop local 4
+label WHILE_EXP2
+push local 1
+push local 2
+add
+push constant 23
+lt
+push local 2
+push constant 4
+lt
+and
+not
+if-goto WHILE_END2
+push local 4
+push this 14
+push local 1
+push local 2
+add
+call Board.clearLine 2
+add
+pop local 4
+push local 2
+push constant 1
+add
+pop local 2
+goto WHILE_EXP2
+label WHILE_END2
+push local 4
+return
+function Block.checkLeft 2
+push argument 0
+pop pointer 0
+push pointer 0
+push this 0
+call Block.convertX 2
+push constant 1
+sub
+pop local 0
+push pointer 0
+push this 1
+call Block.convertY 2
+push constant 1
+sub
+pop local 1
+push this 14
+push local 0
+push constant 1
+sub
+push local 1
+push constant 1
+add
+call Board.getPixel 3
+push this 6
+push constant 0
+eq
+push this 13
+push constant 5
+eq
+push this 13
+push constant 6
+eq
+or
+and
+push this 6
+push constant 2
+eq
+push this 13
+push constant 0
+eq
+and
+or
+and
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+not
+return
+label IF_FALSE0
+push this 14
+push local 0
+push constant 1
+sub
+push local 1
+push constant 2
+add
+call Board.getPixel 3
+push this 6
+push constant 0
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 1
+eq
+or
+push this 13
+push constant 3
+eq
+or
+push this 13
+push constant 4
+eq
+or
+and
+push this 6
+push constant 2
+eq
+push this 13
+push constant 5
+eq
+and
+or
+and
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+not
+return
+label IF_FALSE1
+push this 14
+push local 0
+push constant 2
+add
+push local 1
+push constant 2
+add
+call Board.getPixel 3
+push this 6
+push constant 2
+eq
+push this 13
+push constant 5
+eq
+and
+and
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 0
+not
+return
+label IF_FALSE2
+push this 14
+push local 0
+push local 1
+call Board.getPixel 3
+push this 6
+push constant 1
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 1
+eq
+or
+push this 13
+push constant 3
+eq
+or
+push this 13
+push constant 4
+eq
+or
+and
+and
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push constant 0
+not
+return
+label IF_FALSE3
+push this 14
+push local 0
+push constant 1
+add
+push local 1
+call Board.getPixel 3
+push this 6
+push constant 1
+eq
+push this 13
+push constant 6
+eq
+and
+push this 6
+push constant 3
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 5
+eq
+or
+and
+or
+and
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push constant 0
+not
+return
+label IF_FALSE4
+push this 14
+push local 0
+push local 1
+push constant 1
+add
+call Board.getPixel 3
+push this 13
+push constant 2
+eq
+push this 6
+push constant 1
+eq
+or
+push this 6
+push constant 0
+eq
+push this 13
+push constant 3
+eq
+push this 13
+push constant 4
+eq
+or
+push this 13
+push constant 5
+eq
+or
+and
+or
+push this 6
+push constant 2
+eq
+push this 13
+push constant 1
+eq
+push this 13
+push constant 4
+eq
+or
+push this 13
+push constant 6
+eq
+or
+and
+or
+and
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push constant 0
+not
+return
+label IF_FALSE5
+push this 14
+push local 0
+push constant 1
+add
+push local 1
+push constant 1
+add
+call Board.getPixel 3
+push this 6
+push constant 0
+eq
+push this 13
+push constant 1
+eq
+and
+push this 6
+push constant 2
+eq
+push this 13
+push constant 3
+eq
+and
+or
+push this 6
+push constant 3
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 4
+eq
+or
+push this 13
+push constant 5
+eq
+or
+push this 13
+push constant 6
+eq
+or
+and
+or
+and
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push constant 0
+not
+return
+label IF_FALSE6
+push this 14
+push local 0
+push local 1
+push constant 2
+add
+call Board.getPixel 3
+push this 13
+push constant 2
+eq
+push this 6
+push constant 1
+eq
+or
+push this 6
+push constant 0
+eq
+push this 13
+push constant 6
+eq
+push this 13
+push constant 5
+eq
+or
+and
+or
+push this 6
+push constant 2
+eq
+push this 13
+push constant 1
+eq
+push this 13
+push constant 3
+eq
+or
+and
+or
+push this 6
+push constant 3
+eq
+push this 13
+push constant 3
+eq
+and
+push this 13
+push constant 4
+eq
+or
+push this 13
+push constant 5
+eq
+or
+push this 13
+push constant 6
+eq
+or
+or
+and
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push constant 0
+not
+return
+label IF_FALSE7
+push this 14
+push local 0
+push constant 1
+add
+push local 1
+push constant 2
+add
+call Board.getPixel 3
+push this 6
+push constant 1
+eq
+push this 13
+push constant 3
+eq
+and
+push this 6
+push constant 2
+eq
+push this 13
+push constant 4
+eq
+push this 13
+push constant 5
+eq
+or
+push this 13
+push constant 6
+eq
+or
+and
+or
+push this 6
+push constant 3
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 1
+eq
+or
+and
+or
+and
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push constant 0
+not
+return
+label IF_FALSE8
+push this 14
+push local 0
+push local 1
+push constant 3
+add
+call Board.getPixel 3
+push this 6
+push constant 1
+eq
+push this 13
+push constant 1
+eq
+push this 13
+push constant 5
+eq
+or
+push this 13
+push constant 0
+eq
+or
+and
+push this 6
+push constant 3
+eq
+push this 13
+push constant 6
+eq
+and
+or
+and
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push constant 0
+not
+return
+label IF_FALSE9
+push this 14
+push local 0
+push constant 1
+add
+push local 1
+push constant 3
+add
+call Board.getPixel 3
+push this 6
+push constant 3
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 1
+eq
+or
+push this 13
+push constant 3
+eq
+or
+push this 13
+push constant 4
+eq
+or
+and
+and
+if-goto IF_TRUE10
+goto IF_FALSE10
+label IF_TRUE10
+push constant 0
+not
+return
+label IF_FALSE10
+push constant 0
+return
+function Block.checkRight 2
+push argument 0
+pop pointer 0
+push pointer 0
+push this 0
+call Block.convertX 2
+push constant 1
+sub
+pop local 0
+push pointer 0
+push this 1
+call Block.convertY 2
+push constant 1
+sub
+pop local 1
+push this 14
+push local 0
+push constant 4
+add
+push local 1
+push constant 1
+add
+call Board.getPixel 3
+push this 6
+push constant 3
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 1
+eq
+or
+push this 13
+push constant 3
+eq
+or
+push this 13
+push constant 4
+eq
+or
+and
+and
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+not
+return
+label IF_FALSE0
+push this 14
+push local 0
+push constant 4
+add
+push local 1
+push constant 2
+add
+call Board.getPixel 3
+push this 6
+push constant 0
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 5
+eq
+or
+and
+push this 6
+push constant 2
+eq
+push this 13
+push constant 6
+eq
+and
+or
+and
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+not
+return
+label IF_FALSE1
+push this 14
+push local 0
+push constant 3
+add
+push local 1
+call Board.getPixel 3
+push this 6
+push constant 1
+eq
+push this 13
+push constant 6
+eq
+and
+push this 6
+push constant 3
+eq
+push this 13
+push constant 5
+eq
+and
+or
+and
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 0
+not
+return
+label IF_FALSE2
+push this 14
+push local 0
+push constant 2
+add
+push local 1
+call Board.getPixel 3
+push this 6
+push constant 1
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 1
+eq
+or
+push this 13
+push constant 3
+eq
+or
+push this 13
+push constant 4
+eq
+or
+and
+and
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push constant 0
+not
+return
+label IF_FALSE3
+push this 14
+push local 0
+push constant 3
+add
+push local 1
+push constant 1
+add
+call Board.getPixel 3
+push this 13
+push constant 2
+eq
+push this 6
+push constant 0
+eq
+push this 13
+push constant 1
+eq
+push this 13
+push constant 3
+eq
+or
+and
+or
+push this 6
+push constant 1
+eq
+push this 13
+push constant 3
+eq
+push this 13
+push constant 4
+eq
+or
+push this 13
+push constant 5
+eq
+or
+and
+or
+push this 6
+push constant 2
+eq
+push this 13
+push constant 6
+eq
+push this 13
+push constant 5
+eq
+or
+and
+or
+push this 6
+push constant 3
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 1
+eq
+or
+push this 13
+push constant 4
+eq
+or
+push this 13
+push constant 5
+eq
+or
+push this 13
+push constant 6
+eq
+or
+and
+or
+and
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push constant 0
+not
+return
+label IF_FALSE4
+push this 14
+push local 0
+push constant 2
+add
+push local 1
+push constant 1
+add
+call Board.getPixel 3
+push this 6
+push constant 0
+eq
+push this 13
+push constant 4
+eq
+push this 13
+push constant 6
+eq
+or
+push this 13
+push constant 5
+eq
+or
+and
+push this 6
+push constant 1
+eq
+push this 13
+push constant 1
+eq
+and
+or
+push this 6
+push constant 3
+eq
+push this 13
+push constant 3
+eq
+and
+or
+and
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push constant 0
+not
+return
+label IF_FALSE5
+push this 14
+push local 0
+push constant 3
+add
+push local 1
+push constant 2
+add
+call Board.getPixel 3
+push this 13
+push constant 2
+eq
+push this 6
+push constant 3
+eq
+or
+push this 6
+push constant 0
+eq
+push this 13
+push constant 1
+eq
+push this 13
+push constant 4
+eq
+or
+push this 13
+push constant 6
+eq
+or
+and
+or
+push this 6
+push constant 1
+eq
+push this 13
+push constant 1
+eq
+push this 13
+push constant 3
+eq
+or
+and
+or
+push this 6
+push constant 2
+eq
+push this 13
+push constant 3
+eq
+push this 13
+push constant 4
+eq
+or
+push this 13
+push constant 5
+eq
+or
+and
+or
+and
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push constant 0
+not
+return
+label IF_FALSE6
+push this 14
+push local 0
+push constant 2
+add
+push local 1
+push constant 2
+add
+call Board.getPixel 3
+push this 6
+push constant 0
+eq
+push this 13
+push constant 3
+eq
+and
+push this 6
+push constant 1
+eq
+push this 13
+push constant 4
+eq
+push this 13
+push constant 5
+eq
+or
+push this 13
+push constant 6
+eq
+or
+and
+or
+push this 6
+push constant 2
+eq
+push this 13
+push constant 1
+eq
+and
+or
+and
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push constant 0
+not
+return
+label IF_FALSE7
+push this 14
+push local 0
+push constant 3
+add
+push local 1
+push constant 3
+add
+call Board.getPixel 3
+push this 6
+push constant 3
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 1
+eq
+or
+push this 13
+push constant 3
+eq
+or
+push this 13
+push constant 4
+eq
+or
+and
+and
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push constant 0
+not
+return
+label IF_FALSE8
+push this 14
+push local 0
+push constant 2
+add
+push local 1
+push constant 3
+add
+call Board.getPixel 3
+push this 6
+push constant 1
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 5
+eq
+or
+and
+push this 6
+push constant 3
+eq
+push this 13
+push constant 6
+eq
+and
+or
+and
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push constant 0
+not
+return
+label IF_FALSE9
+push constant 0
+return
+function Block.checkRotate 2
+push argument 0
+pop pointer 0
+push pointer 0
+push this 0
+call Block.convertX 2
+push constant 1
+sub
+pop local 0
+push pointer 0
+push this 1
+call Block.convertY 2
+push constant 1
+sub
+pop local 1
+push this 14
+push local 0
+push constant 1
+add
+push local 1
+call Board.getPixel 3
+push this 6
+push constant 0
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 1
+eq
+or
+push this 13
+push constant 3
+eq
+or
+push this 13
+push constant 4
+eq
+or
+and
+and
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+not
+return
+label IF_FALSE0
+push this 14
+push local 0
+push local 1
+push constant 2
+add
+call Board.getPixel 3
+push this 6
+push constant 3
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 1
+eq
+or
+push this 13
+push constant 3
+eq
+or
+push this 13
+push constant 4
+eq
+or
+and
+and
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+not
+return
+label IF_FALSE1
+push this 14
+push local 0
+push constant 3
+add
+push local 1
+push constant 2
+add
+call Board.getPixel 3
+push this 6
+push constant 2
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 1
+eq
+or
+push this 13
+push constant 3
+eq
+or
+push this 13
+push constant 4
+eq
+or
+and
+and
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 0
+not
+return
+label IF_FALSE2
+push this 14
+push local 0
+push constant 3
+add
+push local 1
+push constant 1
+add
+call Board.getPixel 3
+push this 6
+push constant 1
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 1
+eq
+or
+push this 13
+push constant 3
+eq
+or
+push this 13
+push constant 4
+eq
+or
+and
+and
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push constant 0
+not
+return
+label IF_FALSE3
+push this 14
+push local 0
+push constant 2
+add
+push local 1
+call Board.getPixel 3
+push this 6
+push constant 0
+eq
+push this 13
+push constant 6
+eq
+and
+push this 6
+push constant 2
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 5
+eq
+or
+and
+or
+and
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push constant 0
+not
+return
+label IF_FALSE4
+push this 14
+push local 0
+push local 1
+push constant 1
+add
+call Board.getPixel 3
+push this 6
+push constant 3
+eq
+push this 13
+push constant 6
+eq
+and
+push this 6
+push constant 1
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 5
+eq
+or
+and
+or
+and
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push constant 0
+not
+return
+label IF_FALSE5
+push this 14
+push local 0
+push constant 1
+add
+push local 1
+push constant 3
+add
+call Board.getPixel 3
+push this 6
+push constant 2
+eq
+push this 13
+push constant 6
+eq
+and
+push this 6
+push constant 0
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 5
+eq
+or
+and
+or
+and
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push constant 0
+not
+return
+label IF_FALSE6
+push this 14
+push local 0
+push constant 3
+add
+push local 1
+push constant 2
+add
+call Board.getPixel 3
+push this 6
+push constant 1
+eq
+push this 13
+push constant 6
+eq
+and
+push this 6
+push constant 3
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 5
+eq
+or
+and
+or
+and
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push constant 0
+not
+return
+label IF_FALSE7
+push this 14
+push local 0
+push constant 1
+add
+push local 1
+push constant 1
+add
+call Board.getPixel 3
+push this 6
+push constant 0
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 1
+eq
+or
+and
+push this 6
+push constant 2
+eq
+push this 13
+push constant 3
+eq
+and
+or
+push this 6
+push constant 3
+eq
+push this 13
+push constant 4
+eq
+push this 13
+push constant 5
+eq
+or
+push this 13
+push constant 6
+eq
+or
+and
+or
+and
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push constant 0
+not
+return
+label IF_FALSE8
+push this 14
+push local 0
+push constant 2
+add
+push local 1
+push constant 1
+add
+call Board.getPixel 3
+push this 6
+push constant 1
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 1
+eq
+or
+and
+push this 6
+push constant 3
+eq
+push this 13
+push constant 3
+eq
+and
+or
+push this 6
+push constant 0
+eq
+push this 13
+push constant 4
+eq
+push this 13
+push constant 5
+eq
+or
+push this 13
+push constant 6
+eq
+or
+and
+or
+and
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push constant 0
+not
+return
+label IF_FALSE9
+push this 14
+push local 0
+push constant 1
+add
+push local 1
+push constant 2
+add
+call Board.getPixel 3
+push this 6
+push constant 3
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 1
+eq
+or
+and
+push this 6
+push constant 1
+eq
+push this 13
+push constant 3
+eq
+and
+or
+push this 6
+push constant 2
+eq
+push this 13
+push constant 4
+eq
+push this 13
+push constant 5
+eq
+or
+push this 13
+push constant 6
+eq
+or
+and
+or
+and
+if-goto IF_TRUE10
+goto IF_FALSE10
+label IF_TRUE10
+push constant 0
+not
+return
+label IF_FALSE10
+push this 14
+push local 0
+push constant 2
+add
+push local 1
+push constant 2
+add
+call Board.getPixel 3
+push this 6
+push constant 2
+eq
+push this 13
+push constant 0
+eq
+push this 13
+push constant 1
+eq
+or
+and
+push this 6
+push constant 0
+eq
+push this 13
+push constant 3
+eq
+and
+or
+push this 6
+push constant 1
+eq
+push this 13
+push constant 4
+eq
+push this 13
+push constant 5
+eq
+or
+push this 13
+push constant 6
+eq
+or
+and
+or
+and
+if-goto IF_TRUE11
+goto IF_FALSE11
+label IF_TRUE11
+push constant 0
+not
+return
+label IF_FALSE11
+push constant 0
+return
+function Block.lose 0
+push argument 0
+pop pointer 0
+push this 14
+call Board.lose 1
+return

@@ -1,0 +1,139 @@
+class Board{
+	
+	field Array board;
+	field int startX;
+	field int startY;
+
+	constructor Board new(){
+		let board = Array.new(23);
+		let board[0] = 0;
+		let board[1] = 0;
+
+		let startX = 216;
+		//left
+		let startY = 24;
+		//very bottom is 24 + 8*23
+
+		do Screen.drawRectangle(startX-3, startY, startX-2, startY + 185);
+		do Screen.drawRectangle(startX+81, startY, startX+82, startY + 185); 
+		do Screen.drawRectangle(startX-3, startY+185, startX+82, startY+186);
+		do Screen.drawRectangle(startX-3, startY+23, startX+82, startY+24);
+
+		return this;
+	}
+
+	method void drawPixel(int x, int y){
+		var int new, pow, i;
+
+		let pow = 1;
+		let i = 0;
+		while(i < (9-x)){
+			let pow = pow * 2;
+			let i = i + 1;
+		}
+		let new = board[y];
+		let new = (new | pow);
+		let board[y] = new;
+		do Screen.drawRectangle(startX+(x*8)+1, startY+(y*8)+1, startX+(x*8)+6, startY+(y*8)+6);
+		//do Output.printInt(board[y]);
+		//do Output.printChar(32);
+
+		return;
+	}
+
+	method int clearLine(int y){
+		var int i;
+
+		if(board[y] = 1023){
+
+			do Screen.setColor(false);
+				do Screen.drawRectangle(startX+1, startY+(y*8)+1, startX+78, startY+(y*8)+6);
+				do Screen.setColor(true);
+				do Sys.wait(100);
+		
+			let i = y;
+			while ((i > 0) & (board[i] > 0)){
+				let board[i] = board[i-1];
+				let i = i - 1;
+			}
+
+			let board[i] = 0;
+
+			let i = y;
+			while(board[i] > 0){
+				do Screen.setColor(false);
+				do Screen.drawRectangle(startX+1, startY+(i*8)+1, startX+78, startY+(i*8)+6);
+				do Screen.setColor(true);
+				do drawLine(i);
+				let i = i - 1;
+			}
+			do Screen.setColor(false);
+			do Screen.drawRectangle(startX+1, startY+(i*8)+1, startX+78, startY+(i*8)+6);
+			do Screen.setColor(true);
+			
+			return 1;
+		}
+
+		return 0;
+	}
+
+	method void drawLine(int y){
+		var int pow, temp, i;
+
+		//do Output.printInt(board[y]);
+
+		let pow = 512;
+		let i = 0;
+		let temp = board[y];
+
+		while(i < 10){
+			if((temp > pow) | (temp = pow)){
+				let temp = temp - pow;
+				do Screen.drawRectangle(startX+(i*8)+1, startY+(y*8)+1, startX+(i*8)+6, startY+(y*8)+6);
+				//do Output.printInt(1);
+			}
+			let pow = pow/2;
+			let i = i + 1;
+		}
+
+		return;
+	}
+
+	method boolean lose(){
+		if((board[2] > 0) | (board[1] > 0) | (board[0] > 0)){
+			return true;
+		}
+		return false;
+	}
+
+	method void dispose(){
+		do Memory.deAlloc(this);
+		return;
+	}
+
+	method int getStartY(){
+		return startY;
+	}
+
+	method int getStartX(){
+		return startX;
+	}
+
+	method boolean getPixel(int x, int y){
+		var int pow, i, toReturn;
+
+		let i = 0;
+		let pow = 512;
+		while (i<x){
+			let pow = pow/2;
+			let i = i+1;
+		}
+		let toReturn = board[y] & pow;
+		if(toReturn > 0){
+			return true;
+		}
+		return false;
+
+	}
+
+}

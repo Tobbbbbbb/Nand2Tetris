@@ -1,0 +1,82 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/12/Sys.jack
+
+/**
+ * A library that supports various program execution services.
+ */
+class Sys {
+
+    /** Performs all the initializations required by the OS. */
+    function void init() {
+    do Math.init();
+    do Memory.init();
+    do Screen.init();
+    do Output.init();
+    do Keyboard.init();
+    //do String.init();
+    //do Array.init();
+    do Main.main();
+    do Sys.halt();
+    //return;
+    }
+
+    /** Halts the program execution. */
+    function void halt() {
+
+	while(true){
+
+	}
+	return;
+    }
+
+    /** Waits approximately duration milliseconds and returns.  */
+    function void wait(int duration) {
+
+    var int temp;
+
+    let temp = 0;
+
+    while(temp < duration*5000) {
+
+        let temp = temp + 1;
+
+    }
+
+    return;
+
+    }
+
+    /** Displays the given error code in the form "ERR<errorCode>",
+     *  and halts the program's execution. */
+    function void error(int errorCode) {
+
+    var String toReturn, str;
+    var int temp, length, i;
+
+        let temp = errorCode;
+        let length = 2;
+        while(temp > 10){
+            let temp = temp/10;
+            let length = length + 1;
+        }
+        let str = String.new(length);
+        let str = String.setInt(errorCode);
+
+    let toReturn = String.new(5 + length);
+    let toReturn = toReturn.appendChar("E");
+    let toReturn = toReturn.appendChar("R");
+    let toReturn = toReturn.appendChar("R");
+    let toReturn = toReturn.appendChar("<");
+    let i = 0;
+    while(~(i > str.length())){
+        let toReturn = toReturn.appendChar(str.charAt(i));
+        let i = i+1;
+    }
+    let toReturn = toReturn.appendChar(">");
+
+	do Output.printString(toReturn);
+    return;
+    }
+}

@@ -1,0 +1,214 @@
+class TetrisGame {
+	
+	static Tetrisgame instance;
+	field Block block;
+	field Board board;
+
+	field int maxTime;
+
+	field int bottom;
+
+	field Array score;
+	field int level;
+	field int levelPass;
+	field int levelTracker;
+	field int lessTime;
+	field int softDropScore;
+
+	constructor TetrisGame new() {
+	    do Screen.clearScreen();
+	    let block = Block.new();
+
+	    let maxTime = 15000;
+
+	    let bottom = 240;
+
+	    let score = Array.new(6);
+	    let level = 0;
+	    let levelPass = 10;
+	    let levelTracker = 0;
+	    let lessTime = 1000;
+	    let softDropScore = 0;
+
+	    do Output.moveCursor(0,0);
+	    do Output.printString("Score: 000000");
+	    do Output.println();
+	    do Output.printString("Lines: 0");
+	    do Output.println();
+	    do Output.printString("Level: 0");
+	    do Output.moveCursor(0,57);
+	    do Output.printString("Next: ");
+
+	    return this;
+	}
+
+	method void dispose() {
+		do block.dispose();
+		do Memory.deAlloc(this);
+		return;
+	}
+
+	method void run() {
+		var char key;
+		var boolean pressed, stop;
+		var int time, clear;
+		var Array bots;
+		var TetrisGame game;
+
+		let pressed = false;
+		let stop = false;
+
+		let clear = 0;
+
+		//while key is not esc
+		while(~(key=140) & ~stop){
+			let key = Keyboard.keyPressed();
+			if(pressed & (key=0)){
+				let pressed = false;
+			}
+			if((~pressed) & (~(key = 0))){
+				if((key = 130) | (key = 132)){ //left, right, down arrow
+					do block.move(key, true);
+					let time = time + 500;
+					let softDropScore = 0;
+				}
+				if(key = 133){
+					if(block.checkBot()){
+						do block.undraw();
+						let clear = block.drawPixels();
+						do updateScore(clear);
+						do block.newBlock();
+						do addScore(softDropScore);
+						do printScore();
+						let softDropScore = 0; 
+						let time = 0;
+					} else {
+						let softDropScore = softDropScore + 1;
+						do block.move(key, true);
+					}
+					let time = 0;
+				}
+				if(key=131){
+					let softDropScore = 0;
+					do block.undraw();
+					while(~block.checkBot()){
+						let softDropScore = softDropScore+2;
+						do block.move(133, false);
+					}
+					do block.undraw();
+					let clear = block.drawPixels();
+					do updateScore(clear);
+					do block.newBlock();
+					do addScore(softDropScore);
+					do printScore();
+					let softDropScore = 0;
+				}
+				if((key = 82) | (key = 114)){
+					let softDropScore = 0;
+					do block.rotate();
+					let time = time + 500;
+				}
+				let pressed = true;
+			}
+			let time = time + 1;
+			if((time > maxTime) | (time = maxTime)){
+				let softDropScore = 0;
+				if(block.checkBot()){
+					do block.undraw();
+					let clear = block.drawPixels();
+					do updateScore(clear);
+					do block.newBlock();
+				} else {
+					do block.move(133, true);
+				}
+				let time = 0;
+			}
+			let stop = block.lose();
+		}
+
+		do Output.moveCursor(3,0);
+		do Output.printString("Game Over!");
+		do Output.println();
+		do Output.printString("Press space to Play Again!");
+		do Output.println();
+		do Output.printString("Press Escape to End Program");
+
+		return;
+	}
+
+	function void newInstance() {
+        let instance = TetrisGame.new();
+        return;
+    }
+    
+    /** Returns the single instance of this Pong game. */
+    function TetrisGame getInstance() {
+        return instance;
+    }
+
+    method void updateScore(int clear){
+    	let levelTracker = levelTracker + clear;
+		if(clear=1){
+			do addScore((40*(level+1)));
+		}
+		if(clear=2){
+			do addScore((100*(level+1)));
+		}
+		if(clear=3){
+			do addScore((300*(level+1)));
+		}
+		if(clear=4){
+			do addScore((1200*(level+1)));
+		}
+		if((levelTracker > levelPass) | (levelTracker = levelPass)){
+			let level = level + 1;
+			let levelTracker = levelTracker - levelPass;
+			if(maxTime > 1500){
+				let maxTime = maxTime - lessTime;
+			} else {
+				if(maxTime > 2){
+					let maxTime = maxTime/2;
+				}
+			}
+			do Output.moveCursor(2,7);
+			do Output.printInt(level);
+		}
+		do Output.moveCursor(1,7);
+		do Output.printInt(levelTracker + (10*level));
+		do printScore();
+		return;
+    }
+
+    method void addScore(int num){
+    	var int temp, two, i;
+
+    	let temp = 10*num;
+    	let i = 0;
+    	let two = 0;
+    	while(((temp > 0) & (i < 6)) | (two > 0)){
+    		let temp = temp/10;
+    		let two = two + temp - ((temp/10)*10);
+    		let score[5-i] = score[5-i] + two;
+    		let two = 0;
+    		if(score[5-i] > 9){
+    			let two = 1;
+    			let score[5-i] = score[5-i] - ((score[5-i]/10)*10);
+    		}
+    		let i = i + 1;
+    	}
+
+    	return;
+    }
+
+    method void printScore(){
+    	do Output.moveCursor(0,7);
+    	do Output.printInt(score[0]);
+    	do Output.printInt(score[1]);
+    	do Output.printInt(score[2]);
+    	do Output.printInt(score[3]);
+    	do Output.printInt(score[4]);
+    	do Output.printInt(score[5]);
+    	return;
+    }
+
+}
